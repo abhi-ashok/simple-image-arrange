@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Simple Jigsaw Puzzle Page</title>
+        <link rel="stylesheet" href="styles/index.css" />
+        <script async src="src/index.js"></script>
+    </head>
+    <body>
+        <h3>Arrange Image by Swapping Tiles</h3>
+        <div id="new-images" class="new-images">
+        </div>
+        <div>
+            <img id="original-image" class="original-image" src="res/random1.jpg" />
+        </div>
+        <div id="buttons">
+            <button id="break" onclick="breakImage()">Break</button>
+        </div>
+        <div id="swap-operation" class="swap-operation">
+            <div class="swap-tiles-grid">
+                <span class="grid-item">Coordinate 1</span>
+                <span class="grid-item">Coordinate 2</span>
+                <span class="grid-item">
+                    <label>x</label>
+                    <input type="number" id="x1">
+                </span>
+                <span class="grid-item">
+                    <label>x</label>
+                    <input type="number" id="x2">
+                </span>
+                <span class="grid-item">
+                    <label>y</label>
+                    <input type="number" id="y1">
+                </span>
+                <span class="grid-item">
+                    <label>y</label>
+                    <input type="number" id="y2">
+                </span>
+            </div>
+            <div>
+                <button type="button" onclick="onSwap()">OK</button>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+body {
+    margin: 20px;
+    text-align: center;
+}
+
+img.original-image {
+    margin: 40px;
+}
+
+.swap-tiles-grid {
+    margin: 30px;
+    display: inline-grid;
+    grid-template-columns: auto auto;
+}
+
+.grid-item {
+    border: 1px solid #000000;
+    padding: 30px;
+    text-align: center;
+}
+
+.swap-operation {
+    display: none;
+}
