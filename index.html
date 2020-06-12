@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Simple Arrange Image Puzzle</title>
-        <link rel="stylesheet" href="styles/index.css" />
-        <script async src="src/index.js"></script>
-    </head>
-    <body>
-        <h3>Arrange Image by Swapping Tiles</h3>
-        <div id="new-images" class="new-images">
-        </div>
-        <div>
-            <img id="original-image" class="original-image" src="res/random1.jpg" />
-        </div>
-        <div id="buttons">
-            <button id="break" onclick="breakImage()">Break</button>
-        </div>
-        <div id="swap-operation" class="swap-operation">
-            <div class="swap-tiles-grid">
-                <span class="grid-item">Coordinate 1</span>
-                <span class="grid-item">Coordinate 2</span>
-                <span class="grid-item">
-                    <label>x</label>
-                    <input type="number" id="x1" min='1'>
-                </span>
-                <span class="grid-item">
-                    <label>x</label>
-                    <input type="number" id="x2" min='1'>
-                </span>
-                <span class="grid-item">
-                    <label>y</label>
-                    <input type="number" id="y1" min='1'>
-                </span>
-                <span class="grid-item">
-                    <label>y</label>
-                    <input type="number" id="y2" min='1'>
-                </span>
-            </div>
-            <div>
-                <button type="button" onclick="onSwap()">OK</button>
-            </div>
-        </div>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simple Arrange Image Puzzle</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <script async src="src/index.js"></script>
+  </head>
+  <body>
+    <h3>Arrange Image by Swapping Tiles</h3>
+    <div id="new-images" class="new-images"></div>
+    <div>
+      <img id="original-image" class="original-image" src="res/random1.jpg" />
+    </div>
+    <div id="buttons">
+      <button id="break" onclick="breakImage()">Break</button>
+    </div>
+    <div id="swap-operation" class="swap-operation">
+      <div
+        style="
+          width: 200px;
+          display: inline-grid;
+          margin: 10px;
+          border: 1px solid black;
+        "
+      >
+        <span style="margin: 3px 0 3px 0;font-size: 18px;">Swap</span>
+        <span>
+          <label for="x1"  style="font-weight: bold;">x: </label>
+          <input type="number" id="x1" min="1" max="5" style="width: 10px;" />
+          <label for="y1" style="font-weight: bold;">y: </label>
+          <input type="number" id="y1" min="1" max="5" style="width: 10px;" />
+        </span>
+        <span style="margin: 3px 0 3px 0; font-size: 18px;">with</span>
+        <span style="margin: 0 0 3px 0;">
+          <label for="x2" style="font-weight: bold;">x: </label>
+          <input type="number" id="x2" min="1" max="5" style="width: 10px;" />
+          <label for="y2" style="font-weight: bold;">y: </label>
+          <input type="number" id="y2" min="1" max="5" style="width: 10px;" />
+        </span>
+      </div>
+      <div>
+        <button type="button" onclick="onSwap()">OK</button>
+      </div>
+    </div>
+  </body>
 </html>
